@@ -1,42 +1,54 @@
-
-body {
-  margin: 0;
-  padding: 0;
-  background-image: url("assets/btc-sky-missionary.png");
-  background-size: auto 100vh;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   height: 100%;
+  width: 100%;
+  overflow: hidden;
   font-family: Arial, sans-serif;
 }
 
-.cards-container {
+body {
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.card-container {
   position: absolute;
-  top: 20%;
+  top: 50%;
+  left: 0;
   width: 100%;
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  padding: 1rem;
-  scroll-behavior: smooth;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  animation: scrollCards 60s linear infinite;
+  padding: 20px;
 }
 
 .card {
-  flex: 0 0 auto;
+  display: inline-block;
   background: white;
-  border-radius: 1rem;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-size: 1.2rem;
-  min-width: 250px;
+  white-space: normal;
+  max-width: 300px;
+  vertical-align: middle;
+}
+
+@keyframes scrollCards {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
