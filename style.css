@@ -5,7 +5,7 @@ body {
   background: url('assets/background.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: scroll;
-  min-height: 200vh;
+  min-height: 100vh;
   color: white;
 }
 
@@ -15,10 +15,47 @@ body {
   background: rgba(0, 0, 0, 0.6);
 }
 
-.trivia {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 40px 20px;
-  margin: 20px auto;
-  max-width: 800px;
+.ticker-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 0;
+}
+
+.ticker {
+  display: flex;
+  gap: 2rem;
+  white-space: nowrap;
+  animation: scroll-left 60s linear infinite;
+}
+
+.card {
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 1rem 2rem;
   border-radius: 10px;
+  font-size: 1rem;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Animation */
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.contact {
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 40px;
+  font-size: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.3);
 }
