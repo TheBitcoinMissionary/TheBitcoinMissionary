@@ -2,38 +2,23 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url('assets/background.jpg');
+  background: url('assets/background.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-position: center top;
+  min-height: 200vh;
   color: white;
 }
 
-header {
+.hero {
   text-align: center;
-  padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  padding: 100px 20px 60px;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.card-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 1rem;
-  padding: 1rem;
-  white-space: nowrap;
-}
-
-.card-container::-webkit-scrollbar {
-  height: 0.5rem;
-}
-
-.card {
-  flex: 0 0 auto;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 1rem;
+.trivia {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 800px;
   border-radius: 10px;
-  min-width: 300px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
